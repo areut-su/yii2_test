@@ -15,8 +15,9 @@ Bank
 
 Реализовать 2 REST API метода:
 
-    GET /currencies — должен возвращать список курсов валют с возможностью пагинации
-    GET /currency/<id> — должен возвращать курс валюты для переданного id
+    GET bank/currencies — должен возвращать список курсов валют с возможностью пагинации
+    GET bamk/currency/<id> — должен возвращать курс валюты для переданного id
+    GET bank/currency/INR— пример
 
 API должно быть закрыто bearer-авторизацией.
 
@@ -24,3 +25,7 @@ API должно быть закрыто bearer-авторизацией.
 INSTALLATION
 ------------
 
+git clone https://github.com/areut-su/yii2-traits.git test
+cd  test
+git submodule init
+git submodule update
