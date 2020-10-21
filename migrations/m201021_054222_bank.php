@@ -17,12 +17,13 @@ class m201021_054222_bank extends Migration
       $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
     }
     $this->createTable('{{%bank}}', [
-      'id' => $this->primaryKey(),
+      'id' => $this->char(3)->notNull(),
       'name' => $this->string(255)->notNull(),
-      'rate' => $this->decimal(6, 4)->notNull(),
-      'nominal' => $this->string(4)->notNull(),
-      'char_code' => $this->char(3)->notNull(),
+      'nominal' => $this->integer()->unsigned()->notNull(),
+      'rate' => $this->decimal(10, 4)->notNull(),
     ], $tableOptions);
+
+    $this->addPrimaryKey('pk_id', 'bank', 'id');
 
   }
 
