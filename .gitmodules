@@ -1,6 +1,3 @@
-[submodule "common/yii2-traits"]
-	path = common/yii2-traits
-	url = https://github.com/areut-su/yii2-traits.git
 [submodule "common/traits"]
 	path = common/traits
 	url = https://github.com/areut-su/yii2-traits.git
