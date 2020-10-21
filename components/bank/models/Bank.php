@@ -61,4 +61,12 @@ class Bank extends \yii\db\ActiveRecord
   {
     return new BankQuery(get_called_class());
   }
+
+  public function fields()
+  {
+    return parent::fields() + ['rate_by_1' => function () {
+        return bcdiv($this->rate, $this->nominal, 6);
+      }];
+  }
+
 }
