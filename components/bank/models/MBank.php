@@ -34,12 +34,11 @@ class MBank extends Model
       ['CharCode', 'string', 'length' => 3],
       ['Name', 'string', 'max' => 255],
       ['Nominal', 'number'],
-      ['Value', 'string'],
-      ['Value', function () {
+      ['Value', 'string'], ['Value', function () {
+        $this->Value = str_replace(' ', '', $this->Value);
         $this->Value = str_replace(',', '.', $this->Value);
       }],
-
-
+      ['Value', 'match', 'pattern' => '/^[\d\s]*\.{0,1}[\d]{0,4}$/'],
     ];
   }
 
