@@ -35,7 +35,7 @@ class m201021_054222_bank extends Migration
     echo "m201021_054222_bank cannot be reverted.\n";
     $this->dropTable('{{%bank}}');
 
-    return false;
+    return true;
   }
 
   /*
