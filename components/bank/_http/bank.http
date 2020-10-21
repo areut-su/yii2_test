@@ -3,8 +3,8 @@ Accept: */*
 Cache-Control: no-cache
 Authorization: Bearer YmFuazpiYW5r
 
-
 ###
+
 GET yii2.test/bank/currencies?page=1&per-page=2&XDEBUG_SESSION_START=18007
 #GET yii2.test/bank/currencies
 Accept: */*

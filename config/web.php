@@ -55,10 +55,9 @@ $config = [
       'rules' => [
         'currencies' => 'bank/currencies',
         [
-          'pattern' => 'currency/<id>',
+          'pattern' => 'bank/currency/<id>',
           'route' => 'bank/currency',
         ],
-        'currency' => 'bank/currency',
       ],
     ],
 
