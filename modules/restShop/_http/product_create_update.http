@@ -1,0 +1,70 @@
+POST yii2.test/rest-shop/product/create?XDEBUG_SESSION_START=1
+Accept: application/json;
+Cache-Control: no-cache
+Content-Type: application/json;
+Authorization: Bearer YmFuazpiYW5r
+
+{
+  "name": "продукт2",
+  "isdeleted": 0,
+  "published": 1,
+  "deleted_at": null,
+  "price": "12.00",
+  "shopProductCategories": [
+    {
+      "category_id": 5
+    },
+    {
+      "category_id": 3
+    }
+  ]
+}
+
+> {% client.global.set("product_id", response.body.json.product_id); %}
+
+###
+
+
+
+PUT yii2.test/rest-shop/product/update?id=20XDEBUG_SESSION_START=1
+Accept: application/json;
+Cache-Control: no-cache
+Content-Type: application/json;
+
+{
+  "name": "продукт2_up_20",
+  "isdeleted": 0,
+  "published": 1,
+  "deleted_at": null,
+  "price": "11.00",
+  "shopProductCategories": [
+    {
+      "category_id": 5
+    },
+    {
+      "category_id": 1
+    }
+  ]
+}
+
+###
+
+PUT yii2.test/rest-shop/product/update?id=20XDEBUG_SESSION_START=1
+Accept: application/json;
+Cache-Control: no-cache
+Content-Type: application/json;
+
+{
+  "name": "продукт2_up_20",
+  "isdeleted": 0,
+  "published": 1,
+  "deleted_at": null,
+  "price": "11.00",
+  "shopProductCategories": [
+    {
+      "category_id": 5
+    }
+  ]
+}
+
+###

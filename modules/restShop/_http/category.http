@@ -1,0 +1,51 @@
+POST yii2.test/rest-shop/category/create?XDEBUG_SESSION_START=1
+Accept: application/json;
+Cache-Control: no-cache
+Content-Type: application/json;
+Authorization: Bearer YmFuazpiYW5r
+
+{
+  "name": "category1"
+}
+
+###
+
+PUT yii2.test/rest-shop/category/update?id=1
+Accept: application/json;
+Cache-Control: no-cache
+Content-Type: application/json;
+
+{
+  "name": "category_update"
+}
+
+###
+
+POST yii2.test/rest-shop/category/create?XDEBUG_SESSION_START=1
+Accept: application/json;
+Cache-Control: no-cache
+Content-Type: application/json;
+Authorization: Bearer YmFuazpiYW5r
+
+{
+  "name": "id_00"
+}
+
+####
+
+
+
+DELETE yii2.test/rest-shop/category/delete?id=5&XDEBUG_SESSION_START=1
+Accept: application/json;
+Cache-Control: no-cache
+Content-Type: application/json;
+
+#############
+
+
+GET  yii2.test/rest-shop/category/index?page=1&per-page=2
+Accept: application/json;
+Cache-Control: no-cache
+Content-Type: application/json;
+
+#############

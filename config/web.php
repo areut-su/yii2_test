@@ -6,22 +6,48 @@ $db = require __DIR__ . '/db.php';
 $config = [
   'id' => 'basic',
   'basePath' => dirname(__DIR__),
-  'bootstrap' => ['log'],
+  'bootstrap' => [
+    'log',
+
+  ],
   'aliases' => [
     '@bower' => '@vendor/bower-asset',
     '@npm' => '@vendor/npm-asset',
     '@common' => '@app/common',
   ],
+  'modules' => [
+    'rest-shop' => [
+      'class' => 'app\modules\restShop\Module',
+    ],
+  ],
   'controllerMap' => [
-    'bank' => [ // Fixture generation command line.
+    'bank' => [
       'class' => 'app\components\bank\controllers\BankController',
     ],
+
   ],
   'components' => [
     'request' => [
       // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
       'cookieValidationKey' => 'nbON5igoKMihCKTLCrZCECPYHmtGZdVb',
+      'parsers' => [
+        'application/json' => 'yii\web\JsonParser',
+      ],
     ],
+
+    'response' => [
+      'formatters' => [
+        'json' => [
+          'class' => 'yii\web\JsonResponseFormatter',
+          'prettyPrint' => YII_DEBUG,
+          'encodeOptions' => JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE,
+        ],
+        'html' => [
+          'class' => 'yii\web\HtmlResponseFormatter',
+        ],
+      ],
+    ],
+
     'cache' => [
       'class' => 'yii\caching\FileCache',
     ],
